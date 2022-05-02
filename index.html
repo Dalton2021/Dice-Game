@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="farkle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Farkle!</title>
+  </head>
+
+  <body onload="initializeDice()">
+    <header class="row header animate__animated animate__jackInTheBox"
+      >Welcome to Farkle!</header
+    >
+    <div class="row">
+      <!-- Dice images -->
+      <div class="dice">
+        <img
+          src="images/1.png"
+          id="die1"
+          class="animate__animated animate__rotateIn"
+          data-number="0"
+          onclick="diceClick(this)"
+        />
+        <img
+          src="images/2.png"
+          id="die2"
+          class="animate__animated animate__rotateIn"
+          data-number="1"
+          onclick="diceClick(this)"
+        />
+        <img
+          src="images/3.png"
+          id="die3"
+          class="animate__animated animate__rotateIn"
+          data-number="2"
+          onclick="diceClick(this)"
+        />
+        <img
+          src="images/4.png"
+          id="die4"
+          class="animate__animated animate__rotateIn"
+          data-number="3"
+          onclick="diceClick(this)"
+        />
+        <img
+          src="images/5.png"
+          id="die5"
+          class="animate__animated animate__rotateIn"
+          data-number="4"
+          onclick="diceClick(this)"
+        />
+        <img
+          src="images/6.png"
+          id="die6"
+          class="animate__animated animate__rotateIn"
+          data-number="5"
+          onclick="diceClick(this)"
+        />
+      </div>
+    </div>
+    <!-- Scoring -->
+    <div class="row score animate__animated animate__zoomIn" id="score">
+      0
+    </div>
+
+    <!-- Button row -->
+    <div class="row">
+      <button
+        class="button roll column animate__animated animate__bounceInLeft"
+        onclick="rollDice()"
+        >Roll Dice</button
+      >
+      <button
+        class="button bank column animate__animated animate__bounceInRight"
+        id="bank"
+        onclick="handleBankScore()"
+        >Bank Score</button
+      >
+    </div>
+    <script type="text/javascript" src="farkle.js"></script>
+  </body>
+</html>
